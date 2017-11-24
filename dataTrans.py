@@ -9,6 +9,7 @@ def from_data_to_image(subject_folder):
     data = ld.load_data_for_one_subject(subject_folder)
     zone_combine_list = fsz.find_segmentation_zone_main(data)
     image_zone_list_all =  zti.image_segmentation_data_to_zone(data, zone_combine_list)
+    return image_zone_list_all
 
 def store_image(input_folder, output_folder, image_zone_list_all):
     # if the folder does not exit, make one.
