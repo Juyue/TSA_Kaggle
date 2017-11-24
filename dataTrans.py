@@ -13,11 +13,11 @@ def from_data_to_image(subject_folder):
 def store_image(input_folder, output_folder, image_zone_list_all):
     # if the folder does not exit, make one.
     #get the name for this subject
-    file_name_all = os.listdir(subject_folder)
+    file_name_all = os.listdir(input_folder)
     subject_name = file_name_all[0].split('.')[0]
     
-    if not os.path.isdir(image_folder):
-        os.mkdir(image_folder)    
+    if not os.path.isdir(output_folder):
+        os.mkdir(output_folder)    
     
     # save the image to output folder. 
     n_zone_max = 17
