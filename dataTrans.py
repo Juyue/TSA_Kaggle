@@ -31,7 +31,7 @@ def store_image(input_folder, output_folder, image_zone_list_all):
             if image_zone_list_all[ii][jj] is not None:
                 zone_count[jj] = zone_count[jj] + 1
                 file_name_this = subject_name + '_zone' + str(jj)+'_'+str(zone_count[jj]) + '.txt'
-                file_path_this = os.path.joint(output_folder, file_name_this)
+                file_path_this = os.path.join(output_folder, file_name_this)
                 np.savetxt(file_path_this, image_zone_list_all[ii][jj])
 
                 
